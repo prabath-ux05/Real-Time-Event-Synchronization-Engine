@@ -6,9 +6,8 @@ A full-stack real-time messaging application built using Spring Boot and WebSock
 
 ## 🎥 Demo
 
-👉 Watch the demo video here:
-[Click to Watch Demo]
-[![Watch Demo]([https://drive.google.com/file/d/1ULnT7dYohjQ_oIHFZywwxaxyP5liCw5K/view?usp=drive_link])]
+👉 Watch the demo video here:  
+[▶️ Watch Demo](https://drive.google.com/file/d/1ULnT7dYohjQ_oIHFZywwxaxyP5liCw5K/preview)
 
 ---
 
