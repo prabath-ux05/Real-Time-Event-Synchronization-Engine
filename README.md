@@ -1,107 +1,396 @@
-# 🚀 Real-Time Event Sync Engine "TweetX"
+# ⚡ Real-Time Event Synchronization Engine
 
-A full-stack real-time messaging application built using Spring Boot and WebSocket, inspired by Instagram DMs. This project demonstrates real-time communication, media handling, and persistent chat storage with a clean modern UI.
-
----
-
-## 🎥 Demo
-
-👉 Watch the demo video here:  
-[▶️ Watch Demo](https://drive.google.com/file/d/1ULnT7dYohjQ_oIHFZywwxaxyP5liCw5K/preview)
+![Java](https://img.shields.io/badge/Java-17-orange)
+![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.x-green)
+![WebSocket](https://img.shields.io/badge/WebSocket-Real--Time-blue)
+![JPA](https://img.shields.io/badge/Spring%20Data%20JPA-Persistence-success)
+![H2](https://img.shields.io/badge/H2-Database-lightgrey)
+![Maven](https://img.shields.io/badge/Maven-Build-red)
 
 ---
 
-## ✨ Features
+## 📌 Overview
 
-* ⚡ Real-time messaging using WebSocket
-* 🖼️ Media sharing (images & videos) via REST APIs
-* 💾 Persistent chat storage (H2 Database)
-* 🟢 Live online/offline user status
-* 🔐 User authentication with session persistence
-* 🎨 Clean dark UI with smooth chat experience
-* 📂 Auto-loading chat history on conversation open
+The Real-Time Event Synchronization Engine is a WebSocket-powered communication platform designed to synchronize user events, messaging activities, and conversation state across connected clients in real time.
+
+Built using Spring Boot, WebSockets, and JPA, the system enables low-latency communication, online user tracking, persistent messaging, and session-aware interactions without relying on repetitive client polling.
+
+The project demonstrates practical implementation of event-driven architectures, real-time synchronization mechanisms, WebSocket communication workflows, and backend system design principles commonly used in modern collaborative applications.
 
 ---
 
-## 🧰 Tech Stack
+## 🎥 Demo Video
 
-**Backend:**
+<p align="center">
+  <a href="YOUR_GOOGLE_DRIVE_LINK">
+    <img src="docs/Signup.png" width="900">
+  </a>
+</p>
 
-* Java
-* Spring Boot
-* WebSocket
+<p align="center">
+  <strong>Click the preview image to watch the complete TweetX demonstration.</strong>
+</p>
 
-**Database:**
+---
+## ✨ Core Features
 
-* H2 Database
-* JPA / Hibernate
+### 💬 Real-Time Messaging
 
-**Frontend:**
+- Instant message delivery
+- Bidirectional communication
+- Persistent conversation history
+- Session-aware messaging
 
-* HTML
-* CSS
-* JavaScript
+### 👤 User Authentication
 
-**Other:**
+- User Registration
+- Secure Login Flow
+- Session Management
+- User Validation
 
-* REST APIs (Authentication, File Upload, Message History)
+### 🟢 Presence Synchronization
+
+- Online User Detection
+- Live Status Updates
+- Connection Tracking
+- Session Monitoring
+
+### 📂 File Sharing
+
+- File Upload Support
+- Shared Resources
+- Upload Persistence
+
+### ⚡ Event Synchronization
+
+- Real-Time Event Broadcasting
+- WebSocket-Based Updates
+- Reduced Polling Overhead
+- Low-Latency Communication
 
 ---
 
-## 🔄 System Flow
+## 🏗️ System Architecture
 
 ```text
-User Login → WebSocket Connect → Send Message → Media Upload → Load Chat History → Presence Update
+┌───────────────┐
+│ Browser Client│
+└───────┬───────┘
+        │
+        ▼
+
+┌─────────────────────┐
+│ Spring Boot Backend │
+└─────────┬───────────┘
+          │
+          ▼
+
+ ┌──────────────┐
+ │ Authentication│
+ └──────────────┘
+
+ ┌──────────────┐
+ │ WebSocket Hub│
+ └──────────────┘
+
+ ┌──────────────┐
+ │ Message Store│
+ └──────────────┘
+
+ ┌──────────────┐
+ │ H2 Database  │
+ └──────────────┘
 ```
 
 ---
 
-## 📦 Project Setup
+<details>
+<summary><strong>⚙️ Tech Stack</strong></summary>
 
+### ☕ Backend
 
-### 1. Run the Backend
+- Java 17
+- Spring Boot 3
+- Spring MVC
+- Spring WebSocket
+- Spring Data JPA
 
-* Open in IDE (Eclipse / IntelliJ)
-* Run the main Spring Boot application
+### 🗄️ Database
 
-### 2. Access the Application
+- H2 Database
+- Hibernate ORM
 
+### 🌐 Communication
+
+- WebSocket Protocol
+- Session-Based Communication
+
+### 🎨 Frontend
+
+- HTML
+- CSS
+- JavaScript
+
+### 📦 Build Tools
+
+- Maven
+
+</details>
+
+---
+
+## 🔄 Event Synchronization Workflow
+
+```text
+User Action → WebSocket Event → Server Processing → Event Broadcast → Connected Clients
 ```
+
+---
+
+## 💬 Messaging Workflow
+
+```text
+Sender → WebSocket Channel → Message Validation → Database Persistence → Receiver
+```
+
+---
+
+## 🖼️ Platform Preview
+
+### 🔐 User Authentication
+
+<p align="center">
+  <img src="docs/Signup Page.png" width="80%">
+</p>
+
+### 💬 Real-Time Messaging
+
+<p align="center">
+  <img src="docs/Chat Page.png" width="80%">
+</p>
+
+---
+
+<details>
+<summary><strong>📁 Project Structure</strong></summary>
+
+```text
+Real-Time-Event-Synchronization-Engine/
+│
+├── src/main/java/
+│   ├── controller/
+│   │   ├── AuthController.java
+│   │   ├── MessageController.java
+│   │   └── FileUploadController.java
+│   │
+│   ├── model/
+│   │   ├── User.java
+│   │   └── Message.java
+│   │
+│   ├── repository/
+│   │   ├── UserRepository.java
+│   │   └── MessageRepository.java
+│   │
+│   ├── config/
+│   │   └── WebMvcConfig.java
+│   │
+│   ├── MyWebSocketHandler.java
+│   ├── WebSocketConfig.java
+│   └── DemoApplication.java
+│
+├── src/main/resources/
+│   ├── static/
+│   ├── application.properties
+│
+├── docs/
+│   ├── Signup Page.png
+│   └── Chat Page.png
+│
+├── uploads/
+├── pom.xml
+└── README.md
+```
+
+</details>
+
+---
+
+## 🔌 API Architecture
+
+```text
+Client
+  │
+  ▼
+REST Controllers
+  │
+  ▼
+Service Layer
+  │
+  ▼
+Repositories
+  │
+  ▼
+H2 Database
+```
+
+---
+
+## ☁️ Real-Time Communication Layer
+
+The platform uses WebSocket technology to establish persistent bidirectional communication channels between clients and the server.
+
+### Benefits
+
+- Instant event propagation
+- Reduced network overhead
+- Lower latency communication
+- Efficient state synchronization
+- Improved user experience
+
+---
+
+## 📊 Event Processing Pipeline
+
+```text
+Client Request → Authentication → WebSocket Processing → Message Persistence → Event Broadcast → Client Synchronization
+```
+
+---
+
+## 🗄️ Database Layer
+
+The application utilizes H2 Database with Spring Data JPA for persistence and entity management.
+
+### Stored Data
+
+- User Accounts
+- Conversation History
+- Uploaded Files
+- Session Information
+
+### Benefits
+
+- Lightweight Development Database
+- Easy Configuration
+- Fast Local Development
+- JPA Repository Integration
+
+---
+
+## 🚀 Local Development Setup
+
+### Clone Repository
+
+```bash
+git clone https://github.com/yourusername/Real-Time-Event-Synchronization-Engine.git
+
+cd Real-Time-Event-Synchronization-Engine
+```
+
+### Build Project
+
+```bash
+mvn clean install
+```
+
+### Run Application
+
+```bash
+mvn spring-boot:run
+```
+
+### Access Application
+
+```text
 http://localhost:8080
 ```
 
-### 3. H2 Database Console
+---
 
-```
-http://localhost:8080/h2-console
-```
+## 🔐 Configuration
 
-Use:
+### application.properties
 
-```
-JDBC URL: jdbc:h2:file:./data/chatdb
-Username: sa
-Password: (leave empty)
+```properties
+spring.datasource.url=jdbc:h2:file:./data/chatdb
+spring.datasource.driverClassName=org.h2.Driver
+
+spring.jpa.hibernate.ddl-auto=update
+
+spring.h2.console.enabled=true
 ```
 
 ---
 
-## 📚 What I Learned
+## 🛠️ Engineering Highlights
 
-* Real-time communication using WebSocket in Spring Boot
-* Database persistence with JPA/Hibernate
-* Designing REST APIs for scalable applications
-* Separating real-time events from heavy operations (media upload)
-* Building a complete full-stack system from scratch
+- WebSocket-Based Real-Time Communication
+- Event-Driven Architecture
+- Session-Based Authentication
+- Persistent Message Storage
+- Online User Synchronization
+- File Upload Integration
+- Spring MVC Architecture
+- Spring Data JPA Integration
+- Repository Design Pattern
+- H2 Embedded Database
+- Low-Latency Event Broadcasting
 
 ---
 
-## 📬 Contact
+## 🎯 Learning Outcomes
 
-If you’d like to connect or collaborate, feel free to reach out!
+This project demonstrates practical experience with:
+
+- Real-Time System Design
+- Event-Driven Architectures
+- WebSocket Communication
+- Spring Boot Development
+- Backend API Design
+- Database Persistence
+- Session Management
+- Full-Stack Application Development
 
 ---
 
-## ⭐ Show Your Support
+## 🔮 Future Enhancements
 
-If you like this project, give it a ⭐ on GitHub!
+### Communication
+
+- Group Chat Support
+- Message Reactions
+- Read Receipts
+- Typing Indicators
+
+### Security
+
+- Spring Security Integration
+- JWT Authentication
+- Password Encryption
+- Role-Based Access Control
+
+### Scalability
+
+- PostgreSQL Migration
+- Redis Pub/Sub
+- Kafka Event Streaming
+- Horizontal Scaling
+
+### Observability
+
+- Prometheus Monitoring
+- Grafana Dashboards
+- Centralized Logging
+- Distributed Tracing
+
+---
+
+## 📄 License
+
+This project is intended for educational, learning, and portfolio demonstration purposes.
+
+---
+
+## 👨‍💻 Author
+
+**Prabath D**
