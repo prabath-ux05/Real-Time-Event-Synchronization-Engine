@@ -22,7 +22,7 @@ The project demonstrates practical implementation of event-driven architectures,
 ## 🎥 Demo Video
 
 <p align="center">
-  <a href="YOUR_GOOGLE_DRIVE_LINK">
+  <a href="https://drive.google.com/file/d/1ULnT7dYohjQ_oIHFZywwxaxyP5liCw5K/view?usp=drive_link">
     <img src="docs/Signup.png" width="900">
   </a>
 </p>
