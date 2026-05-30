@@ -1,4 +1,4 @@
-# TweetX - Real-Time Event Synchronization Engine
+# 💭 TweetX - Real-Time Event Synchronization Engine
 
 ![Java](https://img.shields.io/badge/Java-17-orange)
 ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.x-green)
