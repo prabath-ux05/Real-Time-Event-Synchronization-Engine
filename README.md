@@ -104,8 +104,7 @@ The project demonstrates practical implementation of event-driven architectures,
 
 ---
 
-<details>
-<summary><strong>⚙️ Tech Stack</strong></summary>
+## ⚙️ Tech Stack
 
 ### ☕ Backend
 
@@ -135,8 +134,6 @@ The project demonstrates practical implementation of event-driven architectures,
 
 - Maven
 
-</details>
-
 ---
 
 ## 🔄 Event Synchronization Workflow
@@ -163,16 +160,9 @@ Sender → WebSocket Channel → Message Validation → Database Persistence →
   <img src="docs/Signup Page.png" width="80%">
 </p>
 
-### 💬 Real-Time Messaging
-
-<p align="center">
-  <img src="docs/Chat Page.png" width="80%">
-</p>
-
 ---
 
-<details>
-<summary><strong>📁 Project Structure</strong></summary>
+## 📁 Project Structure
 
 ```text
 Real-Time-Event-Synchronization-Engine/
@@ -210,8 +200,6 @@ Real-Time-Event-Synchronization-Engine/
 ├── pom.xml
 └── README.md
 ```
-
-</details>
 
 ---
 
